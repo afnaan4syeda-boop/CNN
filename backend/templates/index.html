@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car vs Bike AI Classifier</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>Car vs Bike <span class="gradient-text">Classifier</span></h1>
+            <p class="subtitle">AI-Powered Image Recognition</p>
+        </header>
+
+        <main>
+            <div class="glass-card upload-section" id="drop-zone">
+                <div class="upload-content">
+                    <div class="icon">📸</div>
+                    <h3>Drop your image here</h3>
+                    <p>or click to browse</p>
+                    <input type="file" id="file-input" accept="image/*" hidden>
+                    <button class="btn btn-primary" id="browse-btn">Select Image</button>
+                </div>
+                <div class="preview-container hidden" id="preview-container">
+                    <img id="image-preview" src="" alt="Preview">
+                    <button class="btn btn-secondary" id="classify-btn">Classify Image</button>
+                </div>
+            </div>
+
+            <div class="glass-card result-section hidden" id="result-section">
+                <div class="loader hidden" id="loader"></div>
+                <div class="result-content" id="result-content">
+                    <h3>Prediction</h3>
+                    <div class="prediction-value" id="prediction-text">---</div>
+                    <div class="confidence-bar-container">
+                        <div class="confidence-bar" id="confidence-bar"></div>
+                    </div>
+                    <p class="confidence-text">Confidence: <span id="confidence-text">0%</span></p>
+                    <button class="btn btn-text" id="reset-btn">Upload Another</button>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 AI Visual recognition System</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>
