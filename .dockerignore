@@ -1,0 +1,10 @@
+tools/
+node_modules/
+frontend/
+.git/
+*.bat
+*.pkl
+!backend/car_bike_model.pkl
+__pycache__/
+.env
+.ipynb_checkpoints/

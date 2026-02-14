@@ -1,3 +1,13 @@
+---
+title: Car vs Bike Classification
+emoji: 🏎️🏍️
+colorFrom: blue
+colorTo: indigo
+sdk: docker
+app_port: 7860
+pinned: false
+---
+
 # Car vs Bike Classifier
 
 A high-performance, portable image classification system with a premium "Glassmorphism" interface.
@@ -15,8 +25,16 @@ A high-performance, portable image classification system with a premium "Glassmo
 - **Portable Environment**: Includes Python 3.11 with all dependencies pre-installed.
 - **High Speed**: Optimized Scikit-learn model for instant classification.
 
-## 🤗 Hugging Face Upload
-To upload your project to Hugging Face, use the included assistant:
+## 🤗 Hugging Face Space Deployment
+This project is optimized for deployment as a Docker Space on Hugging Face.
+
+1. Create a new Space on [Hugging Face](https://huggingface.co/new-space).
+2. Select **Docker** as the SDK.
+3. Push your project files to the Space:
+   - Make sure `Dockerfile`, `backend/`, and `car_bike_model.pkl` are included.
+4. The space will automatically build and deploy the app on port 7860.
+
+Alternatively, use the included assistant for a standard upload (if not using Docker):
 1.  Open a terminal in the project folder.
 2.  Run: `HF_ASSISTANT.bat auth login` (you will need your HF Token).
 3.  Run: `HF_ASSISTANT.bat upload Afnaan08/CarvsBike .`

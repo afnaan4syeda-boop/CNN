@@ -1,9 +1,6 @@
-torch
-torchvision
-fastapi
-uvicorn
-python-multipart
+flask
+flask-cors
+joblib
 pillow
 numpy
 scikit-learn
-matplotlib
